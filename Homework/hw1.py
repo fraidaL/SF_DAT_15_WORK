@@ -31,7 +31,7 @@ killings.fillna(value = 'Unknown', inplace = True)
 
 # 4. How many killings were there so far in 2015?
 killings[killings.year == 2015].shape[0]
-
+len(killings[killings.year == 2015])
 # 5. Of all killings, how many were male and how many female?
 killings.gender.value_counts()
 
@@ -104,6 +104,7 @@ majors.groupby('Major_category').Median.mean().plot(kind='bar')
 # 9. What are the top 10 most UNemployed majors?
 # What are the unemployment rates?
 majors[['Major', 'Unemployment_rate']].sort(columns = 'Unemployment_rate', ascending = False).head(10)
+
 
 # 10. What are the top 10 most UNemployed majors CATEGORIES? Use the mean for each category
 # What are the unemployment rates?
